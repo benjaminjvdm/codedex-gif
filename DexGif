@@ -1,0 +1,9 @@
+import imageio.v3 as iio
+
+filenames = ['/workspaces/WIP/CodeDex Projects/GIF/team-pic1.png', 'CodeDex Projects/GIF/team-pic2.png']
+images = [ ]
+
+for filename in filenames:
+  images.append(iio.imread(filename))
+
+iio.imwrite('team.gif', images, duration = 500, loop = 0)
